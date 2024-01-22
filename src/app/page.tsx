@@ -190,6 +190,7 @@ export default function Home() {
             {todoState === "all" &&
               todos.map((d, i) => (
                 <SingleTodo
+                  key={i}
                   setTextValue={setTextValue}
                   editModeId={editModeId}
                   textValue={textValue}
@@ -205,6 +206,7 @@ export default function Home() {
             {todoState === "active" &&
               activeTodos.map((d, i) => (
                 <SingleTodo
+                  key={i}
                   setTextValue={setTextValue}
                   editModeId={editModeId}
                   textValue={textValue}
@@ -220,6 +222,7 @@ export default function Home() {
             {todoState === "completed" &&
               completedTodos.map((d, i) => (
                 <SingleTodo
+                  key={i}
                   setTextValue={setTextValue}
                   editModeId={editModeId}
                   textValue={textValue}
@@ -271,7 +274,7 @@ export default function Home() {
           className="dropzone cursor-grab border-dashed border-2 border-gray-300 p-6 text-center"
         >
           <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <p>{`Drag 'n' drop some files here, or click to select files`}</p>
         </div>
         {/* Add the drop zone */}
       </main>
