@@ -160,7 +160,7 @@ export default function Home() {
   const activeTodos = todos.filter((d) => !d.isCompleted);
 
   return (
-    <div className="relative w-full pt-20 ">
+    <div className="relative w-full pt-20 px-4 ">
       <BackgroundImage />
       <main className=" flex flex-col gap-6 w-full max-w-[500px]  mx-auto ">
         {/* header */}
